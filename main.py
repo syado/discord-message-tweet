@@ -56,7 +56,7 @@ async def on_message(message):
             r = re.search(r"<#[0-9]+>", text)
             if r:
                 channel = message.server.get_channel(r.group()[2:-1])
-                text = text.replace(r.group(), channel.name+"channel")
+                text = text.replace(r.group(), channel.name+"_ch")
             else:
                 break
 
@@ -64,7 +64,7 @@ async def on_message(message):
             r = re.search(r"<#![0-9]+>", text)
             if r:
                 channel = message.server.get_channel(r.group()[3:-1])
-                text = text.replace(r.group(), channel.name+"channel")
+                text = text.replace(r.group(), channel.name+"_ch")
             else:
                 break
         
