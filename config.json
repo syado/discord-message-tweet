@@ -1,0 +1,14 @@
+{
+    "twitter": {
+        "hashtag": "#xxxxx",
+        "api_url": "https://api.twitter.com/1.1/statuses/update.json",
+        "consumer_key": "xxxxxxxxxxxxxxx",
+        "consumer_secret": "xxxxxxxxxxxxxxx",
+        "access_token_key": "xxxxxxxxxxxxxxx",
+        "access_token_secret": "xxxxxxxxxxxxxxx"
+    },
+    "discord": {
+        "token": "xxxxxxxxxxxxxxx",
+        "channel_id": "123456789999999"
+    }
+}
