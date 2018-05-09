@@ -32,6 +32,8 @@ async def on_ready():
 async def on_message(message):
     if message.channel.id == channel_id:
         user = message.author.display_name
+        if len(user) > 10:
+            user = user[:9]+"…"
         text = message.content
         
         while True:
@@ -65,13 +67,18 @@ async def on_message(message):
                 text = text.replace(r.group(), channel.name+"channel")
             else:
                 break
-
-        params = {"status": user+" : "+text+"\n"+hashtag}
         
+        text = re.sub('`','',text)
+
+        content = user+": "+text+"\n"+hashtag
+        if len(content) > 140:
+            content = content[:139]+"…"
+
+        params = {"status": content}
         try:
             req = twitter.post(url, params = params)
             if req.status_code == 200:
-                print ("OK")
+                print (text)
             else:
                 print ("Error: %d" % req.status_code)
         except:
