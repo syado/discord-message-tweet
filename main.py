@@ -70,9 +70,10 @@ async def on_message(message):
         
         text = re.sub('`','',text)
 
-        content = user+": "+text+"\n"+hashtag
-        if len(content) > 140:
-            content = content[:139]+"…"
+        content = user+": "+text
+        hashtag1 = "\n"+hashtag
+        if len(content) > 140-len(hashtag1):
+            content = content[:139-len(hashtag1)]+"…"+hashtag1
 
         params = {"status": content}
         try:
