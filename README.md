@@ -3,7 +3,7 @@ Discordの特定のテキストチャンネルのメッセージをツイート�
 <br>
 ## 動作に必要な環境
 - [python3](https://www.python.org/downloads/)<br>
-- [discord.py](https://github.com/Rapptz/discord.py)<br>
+- [discord.py](https://github.com/Rapptz/discord.py)(Python Library)<br>
 - [requests](https://github.com/requests/requests)(Python Library)<br>
 - [requests-oauthlib](https://github.com/requests/requests-oauthlib)(Python Library)<br>
 
